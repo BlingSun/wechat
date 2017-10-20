@@ -1,0 +1,24 @@
+
+.contain{
+
+padding:20px;
+}
+.artical{
+  display: flex;
+  flex-direction: row;
+  justify-content:flex-start; 
+  align-items: center;
+  margin-bottom:30px;
+}
+.aimg{
+  width:90px;
+  height:60px;
+  margin-right:20px;
+}
+.title{
+  font-size:16px;
+}
+.bookmark{
+  font-size:12px;
+  color:#999;
+}

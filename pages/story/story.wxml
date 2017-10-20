@@ -1,0 +1,88 @@
+<view class="contain">
+  <view class="tool">
+    <view class="item">
+      <view class="icon" bindtap="chapter">
+        <text class="fa fa-list-ul" style="color:#01539C;"></text>
+      </view>
+    </view>
+    <view class="item">
+      <view class="icon" bindtap="vote" data-vote="{{vote}}">
+        <text class="fa {{icon[0][0]}}" style="color:{{icon[0][1]}};" data-vote="{{vote}}"></text>
+        <text class="voteNo">{{vote}}</text>
+      </view>
+    </view>
+    <view class="item">
+      <view class="icon" bindtap="collect">
+        <text class="fa {{icon[1][0]}}" style="color:{{icon[1][1]}};"></text>
+        <text class="voteNo">{{collect}}</text>
+      </view>
+    </view>
+    <view class="item">
+      <view class="icon" bindtap="chat">
+        <navigator url="/pages/comment/comment?img={{img}}&&storyId={{storyId}}&&storyName={{storyName}}&&userName={{userName}}&&over={{over}}" hover-class="navigator-hover">
+          <text class="fa {{icon[2][0]}}" style="color:{{icon[2][1]}};"></text>
+          <text class="voteNo">{{comment}}</text>
+        </navigator>
+      </view>
+    </view>
+
+    <view class="item">
+      <view class="icon" bindtap="edit">
+        <navigator url="/pages/question/question?img={{img}}&&storyId={{storyId}}&&storyName={{storyName}}&&userName={{userName}}&&over={{over}}" hover-class="navigator-hover">
+        <text class="fa fa-pencil" style="color:#01539C;"></text>
+         <text class="voteNo">{{question}}</text>
+         </navigator>
+      </view>
+    </view>
+  </view>
+
+  <scroll-view class="container" style="height:520px;overflow:scroll" scroll-y bindtap='close' bindscrolltolower="loadDialog">
+  <block wx:if="{{dialog.length>0}}">
+    <block wx:for="{{dialog}}" wx:key="key">
+      <block wx:if="{{item.kind=='c'}}">
+        <view class="center">
+          <text>{{item.word}}</text>
+        </view>
+      </block>
+      <block wx:elif="{{item.kind=='l'}}">
+        <view class="left">
+          <view class="gap">
+            <image class="user leftuser" src="{{item.img}}"></image>
+            <text class="name">赵敏</text>
+          </view>
+          <text class="word">{{item.word}}</text>
+        </view>
+      </block>
+      <block wx:else="{{item.kind=='r'}}">
+        <view class="right">
+          <view class="gap">
+            <image class="user rightuser" src="{{item.img}}"></image>
+            <text class="name rightname">赵敏</text>
+          </view>
+          <text class="rightword">{{item.word}}</text>
+        </view>
+      </block>
+    </block>
+    </block>
+
+  </scroll-view>
+
+
+  <view class="chapterContain {{chide}}">
+    <view class="ctitle" bindtap="close">
+      <text class="close fa fa-times"></text>
+      <text class="c">章节</text>
+    </view>
+    <block wx:for="chapter" wx:for-index="index" wx:key="key">
+      <view wx:if="{{!index}}"></view>
+      <view wx:else> 
+        <view class="list" bindtap="toChapter" data-chapter="{{index}}">第{{index}}章
+            <text class="arrow fa fa-angle-right"></text>
+          </view>
+      
+      </view>
+     
+    </block>
+
+  </view>
+</view>

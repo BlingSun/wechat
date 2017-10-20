@@ -1,0 +1,165 @@
+
+page{  
+  font-size:12px;
+  background-color: #F6F8F9;
+  letter-spacing: 1px;
+   color:#444;
+  
+}
+
+.tool{
+  width:100%;
+  position: relative;
+  z-index:10;
+  margin-top:10px;
+    
+ 
+}
+.item{
+  width:20%; 
+ text-align: center;
+ display: inline-block;
+
+}
+
+.icon{
+ text-align: center;
+width:30px;
+height:30px;
+
+display: inline-block;
+border-radius: 50% 50%;
+line-height: 30px;
+position: relative;
+  background-color: #fff;
+  box-shadow: 0 0 2px #ddd;
+}
+
+.voteNo{
+  position:absolute;
+  z-index: 20;
+  top:0px;
+  background-color:#FE831D;
+  border-radius: 8px 8px;
+  padding:0px 3px;
+  font-size:10px;
+  line-height:14px;
+  color:#fff;
+  border:2px solid #fff
+
+}
+
+
+.container{
+  padding:0px 15px;
+  margin-top:20px;
+  
+}
+.user{
+  width:22px;
+  height:25px;
+  border-radius: 4px 4px;
+   vertical-align: middle;
+}
+.name{
+  font-size:14px;
+  margin-left:5px; 
+  word-spacing: 5px;
+  letter-spacing: 3px;
+
+}
+.word{
+padding:8px;
+background-color: #FEBFBD;
+display: block;
+max-width:240px;
+margin-left:30px;
+border-radius: 5px 5px;
+position: relative;
+}
+.word::before{
+position: absolute;
+width:0px;
+height:0px;
+content:"";
+border-width:6px 10px;
+border-style:solid;
+border-color:#F6F8F9 #FEBFBD #F6F8F9 #F6F8F9;
+left:-20px;
+}
+
+.center{
+  padding:15px 15px;
+  
+}
+
+.right{
+  overflow: auto;
+}
+.rightuser{
+  float:right;
+}
+.rightname{
+float:right;
+margin-right:5px;
+}
+.rightword{
+padding:8px;
+background-color:#B3E3FA;
+display: block;
+max-width:240px;
+border-radius: 5px 5px;
+position: relative;
+  float:right;
+margin-right:30px;
+}
+.rightword::before{
+position: absolute;
+width:0px;
+height:0px;
+content:"";
+border-width:6px 10px;
+border-style:solid;
+border-color:#F6F8F9 #F6F8F9 #F6F8F9 #B3E3FA;
+right:-20px;
+}
+.gap{
+  display:block;
+  margin:5px 0px;
+  overflow: auto; 
+}
+
+
+
+.chapterContain{
+  position: fixed;
+  z-index: 20;
+  top:0px;
+  background-color:#fff;
+  
+  text-align: center;
+  padding:10px 20px;
+  box-shadow:1px 1px 2px #999; 
+}
+.ctitle{
+  height:35px;
+  line-height:35px;
+}
+.close{
+  float:left;
+  
+}
+.list{
+  height:35px;
+  line-height:35px;
+  border-top:1px solid #ddd;
+  margin:0px 20px;
+
+
+}
+.arrow{
+  float:right;
+}
+.hide{
+  display: none;
+}

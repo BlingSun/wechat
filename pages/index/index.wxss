@@ -1,0 +1,37 @@
+.list{
+    column-count:2;
+  column-gap: 8px; 
+  padding:5px 10px;
+}
+
+.item{ 
+  background: #fefefe; 
+  box-shadow: 0 1px 2px rgba(34, 25, 25, 0.4);
+  margin: 5px 0px; 
+  transition: opacity .4s ease-in-out;
+  display: inline-block;
+  border-radius: 5px 5px;
+  overflow: hidden;
+}
+.desc{
+  font-size:14px;
+  padding:0px 8px 8px 8px;
+  color:#2f2f2f;
+}
+
+.tool{
+   column-count:2;
+  column-gap: 8px; 
+   font-size:14px;
+  padding:0px 8px 8px 8px;
+  color:#9b9b9b;
+}
+.count{
+  float: right;
+}
+.see{
+  width:16px;
+  height:16px;
+vertical-align: middle;
+
+}

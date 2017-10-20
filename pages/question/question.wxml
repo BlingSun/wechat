@@ -1,0 +1,63 @@
+<view class="contain">
+  <navigator url="/pages/story/story?storyId={{storyId}}" hover-class="navigator-hover">
+  <view class="top">
+    <image class="img" src="../../img/2.jpg"></image>
+    <view class="detail">
+      <text class="title">{{storyName}} </text>
+
+      <text wx:if="{{over==0}}">【已完结】</text>
+      <text wx:else>【更新至第{{over}}章】</text>
+      <text class="author">By:{{userName}}</text>
+    </view>
+  </view>
+</navigator>
+ <view class="main">
+
+ <view class="item" wx:for="{{data}}" wx:key="key">
+      <image class="readerimg" src="../../img/4.jpg"></image>
+      <view class="left">
+        <text class="reader">{{item.userName}}</text>
+        <text class="comment">{{item.question}}</text>
+        <text class="time">{{item.date}}</text>
+       
+        <text class="replay fa fa-commenting-o" bindtap='answer' data-questionId="{{item.Id}}"></text>
+       
+          <view class="rc" wx:if="{{item.answer}}">
+        <view class="replayContent" wx:for="{{item.answer}}" wx:key="key" wx:for-item="it">
+          <text class="rname">{{it.userName}}</text>
+          <text>回复</text>
+          <text class="pname">{{item.userName}}</text>
+          <text class="rcomment">{{it.note}}</text>
+          <view class="tool">
+           <text class="replay fa fa-commenting-o" bindtap='replay' data-answerId="{{it.Id}}"  data-questionId="{{item.Id}}"></text>
+          <text class="vote fa fa-thumbs-o-up {{it.voteStatue}}" bindtap='vote' data-voteStatue="{{it.voteStatue}}" data-vote="{{it.vote}}" data-answerId="{{it.Id}}">{{it.vote}}</text></view>
+        </view>
+        
+        </view>
+      </view>
+    </view>
+  </view>
+  
+
+ <view class="bottom {{bottom}}">
+    <image class="i" src="../../img/3.jpg"></image>
+    <textarea class="write" bindtap='comment' placeholder='发表评论'></textarea>
+
+  </view>
+  <view class="chat {{achat}}">
+    <form bindsubmit="sendAnswer">
+      <text class="reset" bindtap='reset'>取消</text>
+      <button class="send" form-type="submit">提交</button>
+      <textarea class="chatContain" fixed="true" focus="{{focus}}" name="comment"></textarea>
+    </form>
+  </view>
+
+  <view class="chat {{qchat}}">
+    <form bindsubmit="sendQuestion">
+      <text class="reset" bindtap='reset'>取消</text>
+      <button class="send" form-type="submit">提交</button>
+      <textarea class="chatContain" fixed="true" focus="{{focus}}" name="comment"></textarea>
+    </form>
+  </view>
+
+</view>

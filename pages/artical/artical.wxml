@@ -1,0 +1,59 @@
+<view class="contain">
+  <image class="img" src="{{img}}"></image>
+  <view class="title">{{storyName}}</view>
+  <view class="detail">
+    <text class="author">{{userName}}</text>
+    <text class="reader">1334</text>
+  </view>
+  <view class="desc">{{desc}}</view>
+
+  <view class="bottom">
+    <view class="item" bindtap='vote' data-vote="{{vote}}">
+      <text class="fa {{icon[0][0]}}" style="color:{{icon[0][1]}};" data-vote="{{vote}}"></text>
+        <text class="voteNo">{{vote}}</text>
+        <view>赞</view>
+    </view>
+    <view class="item" bindtap='collect' data-collect="{{collect}}">
+       <text class="fa {{icon[1][0]}}" style="color:{{icon[1][1]}};"></text>
+        <text class="voteNo">{{collect}}</text>
+      <view>收藏</view>
+    </view>
+    <view class="item" bindtap='read'>
+    <navigator url="/pages/story/story?storyId=1" hover-class="navigator-hover"> 
+    
+      <view class="read">阅读</view>
+     
+      </navigator>
+    </view>
+    <view class="item" bindtap='comment' data-comment="{{comment}}">
+     <navigator url="/pages/comment/comment?storyId=1" hover-class="navigator-hover"> 
+      <text class=" fa fa-comment-o" style="color:#999"></text>
+       <text class="voteNo">{{comment}}</text>
+    <view>评论</view>
+    </navigator>      
+    </view>
+    <view class="item" bindtap='chapter' >
+      <text class="fa fa-list-ul" style="color:#999"></text>      
+      <view>章节</view>
+    </view>
+  </view>
+
+ <view class="chapterContain {{chide}}">
+    <view class="ctitle">
+      <text class="close fa fa-times" bindtap="close"></text>
+      <text class="c">章节</text>
+    </view>
+    <block wx:for="chapter" wx:for-index="index" wx:key="key">
+      <view wx:if="{{!index}}"></view>
+      <view wx:else> 
+        <view class="list" bindtap="toChapter" data-chapter="{{index}}">第{{index}}章
+            <text class="arrow fa fa-angle-right"></text>
+          </view>
+      
+      </view>
+     
+    </block>
+
+  </view>
+
+</view>

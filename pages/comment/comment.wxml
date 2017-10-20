@@ -1,0 +1,53 @@
+<view class="contain">
+<navigator url="/pages/story/story?storyId={{storyId}}" hover-class="navigator-hover">
+  <view class="top">
+    <image class="img" src="{{img}}"></image>
+    <view class="detail">
+      <text class="title">{{storyName}} </text>
+
+      <text wx:if="{{over==0}}">【已完结】</text>
+      <text wx:else>【更新至第{{over}}章】</text>
+      <text class="author">By:{{userName}}</text>
+    </view>
+  </view>
+</navigator>
+  <view class="main">
+
+    <view class="item" wx:for="{{data}}" wx:key="key">
+      <image class="readerimg" src="../../img/4.jpg"></image>
+      <view class="left">
+        <text class="reader">{{item.userName}}</text>
+        <text class="comment">{{item.comment}}</text>
+        <text class="time">{{item.date}}</text>
+
+        <text class="replay fa fa-commenting-o" bindtap='replay' data-commentId="{{item.Id}}"></text>
+        <text class="vote fa fa-thumbs-o-up {{item.voteStatue}}" bindtap='vote' data-voteStatue="{{item.voteStatue}}" data-vote="{{item.vote}}" data-commentId="{{item.Id}}">{{item.vote}}</text>
+        <view class="rc" wx:if="{{item.child}}">
+          <view class="replayContent" wx:for="{{item.child}}" wx:key="key" wx:for-item="it">
+            <text class="rname">{{it.userName}}</text>
+            <text>回复</text>
+            <text class="pname">{{item.userName}}</text>
+            <text class="rcomment">{{it.comment}}</text>
+          </view>
+
+        </view>
+      </view>
+    </view>
+
+
+  </view>
+
+  <view class="bottom {{bottom}}">
+    <image class="i" src="../../img/3.jpg"></image>
+    <textarea class="write" bindtap='comment' placeholder='发表评论'></textarea>
+
+  </view>
+  <view class="chat {{chat}}">
+    <form bindsubmit="send">
+      <text class="reset" bindtap='reset'>取消</text>
+      <button class="send" form-type="submit">提交</button>
+      <textarea class="chatContain" fixed="true" focus="{{focus}}" name="comment"></textarea>
+    </form>
+  </view>
+
+</view>

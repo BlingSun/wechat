@@ -1,0 +1,61 @@
+<view class="contain">
+  <view style="display:none">
+    <image wx:for="{{images}}" wx:key="id" id="{{item.imgid}}" src="{{item.img}}" bindload="onImageLoad"></image>
+  </view>
+  <scroll-view scroll-y="true" style="height:{{scrollH}}px" bindscrolltolower="loadImages">
+    <view style="width:100%">
+      <view class="img_item">
+        <view class="list" wx:for="{{col1}}" wx:key="key">
+          <navigator url="/pages/story/story?storyId={{item.id}}" hover-class="navigator-hover">
+            <image class="pic" src="{{item.img}}" style="width:100%;height:{{item.height}}px">
+              <text class="label fa fa-tag fa-mini">人生</text>
+            </image>
+
+            <view class="desc">{{item.info}}</view>
+            <view class="tool">
+              <view>
+                <text>{{item.userName}}</text>
+              </view>
+              <view class="count">
+                <image class="see" src="../../img/see.png"></image>
+                <text>{{item.readNo}}</text>
+              </view>
+            </view>
+          </navigator>
+        </view>
+      </view>
+      <view class="img_item">
+        <view class="list" wx:for="{{col2}}" wx:key="key">
+          <navigator url="/pages/story/story?storyId={{item.id}}" hover-class="navigator-hover">
+            <image class="pic" src="{{item.img}}" style="width:100%;height:{{item.height}}px">
+              <text class="label fa fa-tag fa-mini">人生</text>
+            </image>
+            <view class="desc">{{item.info}}</view>
+            <view class="tool">
+              <view>
+                <text>{{item.userName}}</text>
+              </view>
+              <view class="count">
+                <image class="see" src="../../img/see.png"></image>
+                <text>{{item.readNo}}</text>
+              </view>
+            </view>
+          </navigator>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+
+  <view class="assort" bindtap='assort'>{{nowkind}}
+    <text class="fa fa-angle-down"></text>
+  </view>
+  <view class="tags {{hide}}">
+    <view class="tcontain">
+      <text class="tag" wx:for="{{kind}}" wx:key="{{key}}" bindtap='select' data-tagId="{{item.Id}}" data-tagName="{{item.kind}}">{{item.kind}}</text>
+     
+    </view>
+    <view class="close" bindtap='close'><text class="fa fa-times fa-2x"></text></view>
+  </view>
+</view>
+
+<image class="refresh" src="../../img/refresh.png"></image>

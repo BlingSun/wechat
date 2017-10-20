@@ -1,0 +1,52 @@
+<view class="contain">
+  <view class="list">
+
+ <view class="item" wx:for="{{data}}" wx:key="key">
+      <image class="readerimg" src="../../img/4.jpg"></image>
+      <view class="left">
+        <text class="reader">{{item.qUserName}}</text>
+        <text class="comment">{{item.qQuestion}}</text>
+        <text class="time">{{item.qDate}}</text>
+       
+        <text class="replay fa fa-commenting-o" bindtap='answer' data-questionId="{{item.qId}}"></text>         
+<navigator url="../../pages/artical/artical?storyId=1"  hover-class="navigator-hover">
+        <view class="artical">
+        
+          <image class="aimg" src="{{item.img}}"></image>
+          <view class="desc">
+            <view class="title">{{item.storyName}}</view>
+            <text class="author"> {{item.userName}}</text>
+          </view>
+        
+        </view>
+          </navigator>
+
+          <view class="rc" wx:if="{{item.answer}}">
+        <view class="replayContent" wx:for="{{item.answer}}" wx:key="key" wx:for-item="it">
+          <text class="rname">{{it.userName}}</text>
+          <text>回复</text>
+          <text class="pname">{{item.userName}}</text>
+          <text class="rcomment">{{it.note}}</text>
+          <view class="tool">
+           <text class="replay fa fa-commenting-o" bindtap='replay' data-answerId="{{it.Id}}"  data-questionId="{{item.Id}}"></text>
+          <text class="vote fa fa-thumbs-o-up {{it.voteStatue}}" bindtap='vote' data-voteStatue="{{it.voteStatue}}" data-vote="{{it.vote}}" data-answerId="{{it.Id}}">{{it.vote}}</text></view>
+        </view>
+        
+        </view>
+      </view>
+    </view>
+  </view>
+  
+
+
+
+  <view class="chat {{chat}}">
+    <form bindsubmit="send">
+      <text class="reset" bindtap='reset'>取消</text>
+      <button class="send" form-type="submit">提交</button>
+      <textarea class="chatContain" fixed="true" focus="{{focus}}" name="comment"></textarea>
+    </form>
+  </view>
+</view>
+
+<image bindtap='refresh' class="refresh" src="../../img/refresh.png"></image>

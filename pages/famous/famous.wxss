@@ -1,0 +1,76 @@
+
+page {
+ 
+  font-size:12px;
+  background-color: #F6F8F9;
+
+}
+.contain{
+  padding:20px 0;
+}
+.famouse{
+  padding:20px;
+  margin:20px 50px;
+}
+.list{
+  display: inline-block;
+}
+.item{
+  display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+ 
+}
+.book{
+width:250px;
+border:1px solid #ddd;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding:15px 0px;
+background-color: #fff;
+box-shadow: 0 0 2px #ddd;
+margin:20px 10px;
+
+
+}
+.img{
+  width:180px;
+  height:250px;
+}
+.title{
+  font-size:16px;
+ 
+}
+.author{
+  color:#999;
+}
+.reader{
+  width:40px;
+  height:40px;
+  border-radius: 50% 50%;
+}
+
+
+
+
+.scroll-view-item_H{
+  width:100px;
+  height:100px;
+  display: inline-block;
+}
+.bc_green{
+  background-color: green;
+  
+}
+.bc_red{
+  background-color: red;
+}
+.bc_yellow{
+  background-color: yellow;
+}
+.bc_blue{
+  background-color: blue;
+}

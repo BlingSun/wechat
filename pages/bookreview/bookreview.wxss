@@ -1,0 +1,202 @@
+
+
+page{
+  
+  font-size:12px;
+  background-color: #F6F8F9;
+  letter-spacing: 1px;
+   color:#444;
+}
+.contain{
+   width:100%;  
+  overflow: hidden;
+  color:#444;
+font-size:12px;
+letter-spacing:1px;
+
+}
+
+.item{
+  background-color:#fff;
+ padding:10px 0px;
+  margin-bottom:20px;
+  box-shadow:0 1px 2px #EDECE8;
+   display: flex;
+  flex-direction: row;
+  justify-content: center;
+ 
+ 
+  width:100%;
+}
+.readerimg{
+  width:30px;
+  height:30px;
+  border-radius:50% 50%;
+
+
+}
+.left{
+  margin-left:10px;
+  width:300px;
+}
+.reader{
+  display: block;
+  
+
+}
+.comment{
+   display: block;
+   margin:10px 0px;
+
+}
+.time{
+  color:#999;
+}
+.vote{
+
+float:right;
+margin-right:20px;
+}
+
+.replay{
+  float:right;
+
+}
+
+.artical{
+  display: flex;
+  flex-direction: row;
+  justify-content:flex-start; 
+  align-items: center;
+  border-top:1px solid #ddd;
+  padding-top:15px;
+  width:100%;
+  margin-top:15px;
+}
+.aimg{
+  width:80px;
+  height:50px;
+  margin-right:20px;
+}
+.title{
+  font-size:16px;
+}
+.author{
+  font-size:12px;
+  color:#999;
+}
+
+
+
+
+
+.replayContent{
+  padding:10px;
+  background-color:#FAFAFA;
+  margin:10px 0px;
+  
+}
+.rname{
+  color:#789938;
+  padding:0 5px;
+}
+.pname{
+  color:#789938;
+  padding:0 5px;
+}
+
+.tool{
+  overflow: auto;
+}
+
+.bottom{
+  position: fixed;
+  z-index: 10;
+  bottom:0px;
+  box-shadow: 0 1px 2px rgba(34, 25, 25, 0.4);
+  height:50px;
+   display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  background-color:#fff;
+  width:100%;
+}
+.i{
+  width:30px;
+   height:30px;
+   border-radius: 50% 50%;
+   margin-left:10px;
+}
+.write{
+  height:30px;
+  overflow: auto;
+  margin-left:10px;
+  background-color: #fff;
+  line-height: 30px;
+
+border:1px solid #EDECE8;
+}
+
+
+.chat{
+  height:150px;
+  width:100%;
+  box-shadow:0 1px 2px #EDECE8;
+  position:fixed;
+  z-index:100;
+  bottom:0px;
+  background-color: #fff;
+  border-top:1px solid #ddd;
+  padding:10px 0px;
+  display: none;
+   
+}
+.reset{
+ margin:10px 25px;
+}
+.send{
+font-size:12px;
+color:red;
+float:right;
+margin-right:25px;
+padding:3px 8px;
+line-height: 20px;
+}
+
+.chatContain{
+
+height:100px;
+border:1px solid #ddd;
+border-radius: 5px 5px;
+margin:20px 20px;
+width:330px;
+overflow-y: scroll;
+}
+
+.bhide{
+  display: none;
+}
+
+.cshow{
+  display:block;
+}
+.like{
+  color:#FA3715;
+}
+
+.refresh{
+  position: fixed;
+  bottom:10px;
+  right:20px;
+  width:32px;
+  height:32px;
+  z-index: 100;
+  opacity:0.8;
+filter:alpha(opacity=80); /* 针对 IE8 以及更早的版本 */
+   border-radius: 50% 50%;
+}
+.refresh:hover{
+  opacity:1;
+filter:alpha(opacity=100); /* 针对 IE8 以及更早的版本 */
+}

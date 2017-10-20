@@ -1,0 +1,47 @@
+<view class="tags">
+  <navigator url="/pages/cnotice/cnotice" hover-class="navigator-hover">
+    <text class="tag fa fa-exclamation-circle">评论消息</text>
+  </navigator>
+  <navigator url="/pages/qnotice/qnotice" hover-class="navigator-hover">
+    <text class="tag fa fa-exclamation-circle">问答消息</text>
+  </navigator>
+</view>
+
+<view class="contain">
+  <block wx:for="{{data}}" wx:key="{{key}}">
+    <block wx:if="{{item.style==1}}">
+      <view class="list">
+        <view class="title">
+          <navigator url="/pages/comment/comment?storyId=1" hover-class="navigator-hover">关于@倾城之恋</navigator>
+        </view>
+        <view>
+          <text class="user">张文</text>@评论了你：
+          <text>这篇文章中为什么</text>
+        </view>
+        <view class="replay" bindtap='replay' data-commentId="1">
+          <text class="fa fa-commenting-o" data-commentId="1"></text> 回复</view>
+      </view>
+    </block>
+    <block wx:else>
+      <view class="list">
+        <view class="title">
+          <navigator url="/pages/comment/comment?storyId=1" hover-class="navigator-hover">关于@倾城之恋</navigator>
+        </view>
+        <view>
+          <text class="user">张文</text>@回复了你：
+          <text>这篇文章中为什么</text>
+        </view>
+        <view class="replay" bindtap='replay' data-commentId="1">
+          <text class="fa fa-commenting-o" data-commentId="1"></text> 回复</view>
+      </view>
+    </block>
+  </block>
+</view>
+
+<view class="chat {{chat}}">
+  <form bindsubmit="send">
+    <text class="reset" bindtap='reset'>取消</text>
+    <button class="send" form-type="submit">提交</button>
+    <textarea class="chatContain" fixed="true" focus="{{focus}}" name="comment"></textarea>
+  </form>
+</view>

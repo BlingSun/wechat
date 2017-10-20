@@ -1,0 +1,61 @@
+{
+  "pages":[
+    
+      "pages/main/main",
+    
+    "pages/cnotice/cnotice",
+"pages/qnotice/qnotice",
+    "pages/artical/artical",
+    
+    "pages/zone/zone",
+      "pages/story/story",
+    "pages/comment/comment",
+    "pages/famous/famous",    
+   
+    "pages/bookreview/bookreview",
+    "pages/question/question",
+    "pages/collect/collect",
+    "pages/nowread/nowread"
+    
+   
+    
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "聊聊天",
+    "backgroundColor": "#F8F9FB",
+    "navigationBarTextStyle":"black"
+  },
+    "tabBar": {
+      "color": "black",
+      "selectedColor":"#2c71ff",
+      "borderStyle":"white",
+      "list": [
+        {
+          "pagePath": "pages/main/main",
+          "text": "知识",
+          "iconPath": "img/fly.png",
+          "selectedIconPath": "img/fly2.png" 
+        },
+      
+        {
+          "pagePath": "pages/bookreview/bookreview",
+          "text": "问答",
+          "iconPath": "img/idea.png",
+          "selectedIconPath": "img/idea2.png"
+        },
+        {
+          "pagePath": "pages/zone/zone",
+          "text": "我的",
+          "iconPath": "img/uservip.png",
+          "selectedIconPath": "img/uservip2.png"
+        }
+      ]
+    },
+    "networkTimeout": {
+      "request": 10000,
+      "downloadFile": 10000
+    },
+    "debug": true
+}

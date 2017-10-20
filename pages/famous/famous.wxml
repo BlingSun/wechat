@@ -1,0 +1,59 @@
+<view class="contain">
+  <scroll-view class="famous" scroll-x style="white-space:nowrap;" bindscrolltolower="books">
+    <view class="list">
+      <view class="item">
+      <navigator url="../../pages/artical/artical?artical=1" hover-class="navigator-hover">
+        <view class="book">
+          <image class="img" src="../../img/8.jpg"></image>
+          <view class="title">悟空传【至第六章】</view>
+          <view class="author">作者：今何在</view>
+        </view>
+        </navigator>
+        <view>
+          <image class="reader" src="../../img/8.jpg"></image>
+          <image class="reader" src="../../img/9.jpg"></image>
+          <image class="reader" src="../../img/1.jpg"></image>
+        </view>
+        <view class="detail">yoyo等1334人在读</view>
+      </view>
+    </view>
+
+    <view class="list">
+      <view class="item">
+      <navigator url="../../pages/artical/artical?artical=1" hover-class="navigator-hover">
+        <view class="book">
+          <image class="img" src="../../img/8.jpg"></image>
+          <view class="title">悟空传【至第六章】</view>
+          <view class="author">作者：今何在</view>
+        </view>
+        </navigator>
+        <view>
+          <image class="reader" src="../../img/8.jpg"></image>
+          <image class="reader" src="../../img/9.jpg"></image>
+          <image class="reader" src="../../img/1.jpg"></image>
+        </view>
+        <view class="detail">yoyo等1334人在读</view>
+      </view>
+    </view>
+
+ <view class="list">
+      <view class="item">
+      <navigator url="../../pages/artical/artical?artical=1" hover-class="navigator-hover">
+        <view class="book">
+          <image class="img" src="../../img/8.jpg"></image>
+          <view class="title">悟空传【至第六章】</view>
+          <view class="author">作者：今何在</view>
+        </view>
+        </navigator>
+        <view>
+          <image class="reader" src="../../img/8.jpg"></image>
+          <image class="reader" src="../../img/9.jpg"></image>
+          <image class="reader" src="../../img/1.jpg"></image>
+        </view>
+        <view class="detail">yoyo等1334人在读</view>
+      </view>
+    </view>
+
+
+  </scroll-view>
+</view>

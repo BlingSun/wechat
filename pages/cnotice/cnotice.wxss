@@ -1,0 +1,75 @@
+.contain{
+
+font-size:14px;
+padding:10px 15px;
+letter-spacing: 1px;
+}
+.list{
+padding:10px 0px;
+border-bottom:1px dotted silver;
+
+}
+.title{
+  
+  text-decoration:underline;
+  margin-bottom:5px;
+}
+.replay{
+  text-align: right;
+}
+
+.chat{
+  height:150px;
+  width:100%;
+  box-shadow:0 1px 2px #EDECE8;
+  position:fixed;
+  z-index:100;
+  bottom:0px;
+  background-color: #fff;
+  border-top:1px solid #ddd;
+  padding:10px 0px;
+  display: none;
+  font-size:12px;
+   
+}
+.reset{
+  margin:10px 25px;
+
+}
+.send{
+
+font-size:12px;
+color:red;
+float:right;
+margin-right:25px;
+padding:3px 8px;
+line-height: 20px;
+
+}
+
+.chatContain{
+
+height:100px;
+border:1px solid #ddd;
+border-radius: 5px 5px;
+margin:20px 20px;
+width:330px;
+overflow-y: scroll;
+}
+
+
+.cshow{
+  display:block;
+}
+
+.tags{
+display: flex;
+flex-direction: row;
+justify-content: space-around;
+
+}
+.tag{
+  padding:0px 5px;
+  font-size:14px;
+  
+}

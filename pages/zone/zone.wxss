@@ -1,0 +1,114 @@
+.contain{ 
+ color:#444;
+ font-size:12px; 
+ letter-spacing: 1px; 
+overflow: auto;
+ background-color: #F8F9FB;
+
+
+}
+.top{
+background-color: #fff;
+padding:20px;
+border-bottom:1px solid #ddd;
+box-shadow: 0px 1px 2px #ddd;
+
+}
+.t{
+   display: flex;
+ flex-direction:row;  
+  align-items: center;
+}
+.out{
+  width:50px;
+  height:50px;
+  border-radius: 50% 50%;
+  border:1px solid #ddd;  
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  margin-right:20px;
+
+}
+.img{
+  width:40px;height:40px;
+  border-radius: 50% 50%;
+ 
+}
+.tool{
+  width:100%;
+  height:50px;
+  display: flex;
+  flex-direction: row;
+  justify-content:space-around; 
+  align-items: center;
+}
+
+.main{
+  margin-top:20px;
+ background-color: #fff;
+ padding:10px 20px;
+
+}
+.edit{
+  height:50px;
+  line-height:50px;
+  border-bottom:1px solid #ddd;
+
+
+}
+
+.e{
+  margin-right:10px;
+  
+}
+.arrow{
+  float:right;
+
+}
+.nowread{
+   padding:0px 0px 15px 0px;
+  border-bottom:1px solid #ddd;
+}
+.list{
+   height:40px;
+  line-height:40px;
+ 
+}
+.artical{
+  display: flex;
+  flex-direction: row;
+  justify-content:flex-start; 
+  align-items: center;
+}
+.aimg{
+  width:60px;
+  height:50px;
+  margin-right:20px;
+}
+.title{
+  font-size:16px;
+}
+.bookmark{
+  font-size:12px;
+  color:#999;
+}
+.collect{
+ padding:0px 0px 15px 0px;
+  border-bottom:1px solid #ddd;
+}
+.bottom{
+  
+  padding:10px 20px;
+  
+  background-color: #fff;
+  margin-top:20px;
+}
+button{
+  margin:0px;
+  background-color: #fff;
+ 
+}
+button::after{
+ border:none;
+}
